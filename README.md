@@ -1,3 +1,3 @@
 # controle-financeiro
-um site para  controlar casto  do mes
-https://canore000.github.io/controle-financeiro/
+um site para  controle finaceiro  do mes
+ https://gabrielaraujodev.github.io/controle-financeiro/
