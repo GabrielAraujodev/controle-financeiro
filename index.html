@@ -4,52 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Controle de despesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Controle Financeiro</title>
   </head>
   <body>
-    <h2>Controle de despesas</h2>
+    <div class="header">
+      <div class="header-icon">
+        <i class="fas fa-wallet"></i>
+      </div>
+      <h2>Controle Financeiro</h2>
+    </div>
 
     <div class="container">
-      <h4>Saldo atual</h4>
-      
-      <h1 id="balance" class="balance">R$ 0.00</h1>
+      <div class="balance-card">
+        <h4><i class="fas fa-chart-pie"></i> Saldo Atual</h4>
+        <h1 id="balance" class="balance">R$ 0,00</h1>
+      </div>
 
       <div class="inc-exp-container">
-        <div>
+        <div class="income-card">
+          <div class="icon-wrapper plus-icon">
+            <i class="fas fa-arrow-up"></i>
+          </div>
           <h4>Receitas</h4>
-          <p id="money-plus" class="money plus">+ R$0.00</p>
+          <p id="money-plus" class="money plus">+ R$ 0,00</p>
         </div>
 
-        <div>
+        <div class="expense-card">
+          <div class="icon-wrapper minus-icon">
+            <i class="fas fa-arrow-down"></i>
+          </div>
           <h4>Despesas</h4>
-          <p id="money-minus" class="money minus">- R$0.00</p>
+          <p id="money-minus" class="money minus">- R$ 0,00</p>
         </div>
       </div>
 
-      <h3>Transações</h3>
-      
-      <ul id="transactions" class="transactions"> </ul>
+      <div class="transactions-section">
+        <h3><i class="fas fa-list"></i> Transações</h3>
+        <ul id="transactions" class="transactions"> </ul>
+      </div>
 
-      <h3>Adicionar transação</h3>
-      
-      <form id="form">
-        <div class="form-control">
-          <label for="text">Nome</label>
-          <input autofocus type="text" id="text" placeholder="Nome da transação" />
-        </div>
+      <div class="add-transaction-section">
+        <h3><i class="fas fa-plus-circle"></i> Nova Transação</h3>
+        
+        <form id="form">
+          <div class="form-control">
+            <label for="text"><i class="fas fa-tag"></i> Descrição</label>
+            <input autofocus type="text" id="text" placeholder="Ex: Salário, Aluguel..." />
+          </div>
 
-        <div class="form-control">
-          <label for="amount">Valor <br />
-            <small>(negativo - despesas, positivo - receitas)</small>
-          </label>
-          <input type="number" id="amount" placeholder="Valor da transação" />
-        </div>
+          <div class="form-control">
+            <label for="amount"><i class="fas fa-dollar-sign"></i> Valor</label>
+            <input type="number" id="amount" placeholder="Digite o valor (use negativo para despesas)" step="0.01" />
+            <small class="hint">Use sinal negativo (-) para despesas</small>
+          </div>
 
-        <button class="btn">Adicionar</button>
-      </form>
+          <button type="submit" class="btn">
+            <i class="fas fa-plus"></i> Adicionar Transação
+          </button>
+        </form>
+      </div>
     </div>
 
-    <footer> Feito  por  @Gabriel</footer>
+    <footer>
+      <p><i class="fas fa-code"></i> Feito por <span>@Gabriel</span></p>
+    </footer>
     
     <script src="script.js"></script>
   </body>
